@@ -69,6 +69,8 @@ export class News extends Component {
                   description={e.description ? e.description.slice(0, 88) : ""}
                   imgurl={e.urlToImage}
                   newsurl={e.url}
+                  author={e.author}
+                  date={e.publishedAt}
                 />
               </div>
             );
@@ -78,12 +80,12 @@ export class News extends Component {
           <button
             disabled={this.state.page <= 1}
             type="button"
-            class="btn btn-dark"
+            className="btn btn-dark"
             onClick={this.handlePrev}
           >
             &larr; Previous
           </button>
-          <button type="button" class="btn btn-dark" onClick={this.handleNext}>
+          <button type="button" className="btn btn-dark" onClick={this.handleNext}>
             Next &rarr;
           </button>
         </div>
