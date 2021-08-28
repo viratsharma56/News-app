@@ -9,7 +9,6 @@ export class News extends Component {
     category: "general",
   };
 
-  
   capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
@@ -21,7 +20,9 @@ export class News extends Component {
       loading: false,
       page: 1,
     };
-    document.title = `${this.capitalizeFirstLetter(this.props.category)}-News Monkey`;
+    document.title = `${this.capitalizeFirstLetter(
+      this.props.category
+    )}-News Monkey`;
   }
 
   async componentDidMount() {
