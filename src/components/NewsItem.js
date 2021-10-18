@@ -15,7 +15,7 @@ const NewsItem = props => {
           >
             <span className="badge rounded-pill bg-danger"> {source} </span>
           </div>
-          <div className="card-body">
+          <div className="card-body" style={{height: '500px'}}>
             <img
               src={
                 !imgurl
@@ -24,6 +24,10 @@ const NewsItem = props => {
               }
               className="card-img-top"
               alt="..."
+              style={{
+                height: '250px',
+                width: '100%'
+              }}
             />
             <h5 className="card-title">{title}</h5>
             <p className="card-text">{description}</p>
@@ -37,6 +41,7 @@ const NewsItem = props => {
               href={newsurl}
               target="_blank"
               className="btn btn-sm btn-primary"
+              style={{marginBottom: 'auto'}}
             >
               Go somewhere
             </a>

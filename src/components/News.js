@@ -30,7 +30,7 @@ const News = (props) => {
   }
 
   useEffect(() => {
-    document.title = `${capitalizeFirstLetter(props.category)} - News Monkey`;
+    document.title = `${capitalizeFirstLetter(props.category)} - News App`;
     updateNews();
     // eslint-disable-next-line
   }, [])
@@ -62,7 +62,7 @@ const News = (props) => {
   };
   return (
       <div className="container my-3">
-        <h2 className="text-center" style={{marginTop: "70px"}}>NewsMonkey</h2>
+        <h2 className="text-center" style={{marginTop: "70px"}}>NewsApp</h2>
         {loading && <Loading/>}
         <InfiniteScroll
           dataLength={articles.length}
